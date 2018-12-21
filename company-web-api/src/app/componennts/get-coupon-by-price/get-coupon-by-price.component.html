@@ -1,0 +1,20 @@
+
+<!--user can get company coupons from specific price and lower-->
+<div class="price-container">
+    ENTER PRICE :&nbsp;
+    <input type="number" required type="number" name="price" [(ngModel)]="couponPrice"> &nbsp;
+    <button (click)="getCompanyByPrice()">GET COUPON</button>
+    </div>
+
+<div class="grid-container">
+    <div class="item" *ngFor="let coupon of coupons; index as i">
+  <img src={{coupon.image}} alt="" />
+  <h4> {{ coupon.title }} | price: {{ coupon.price }}</h4>
+  <h6> coupon id: {{coupon.id }}</h6>
+  <h5>START DATE: {{ coupon.start_date }} | END DATE: {{ coupon.end_date }}</h5>
+  <h5>AMOUNT LEFT: {{ coupon.amount }} | COUPON TYPE: {{ coupon.type }}</h5>
+  <h5>DETAILS: {{ coupon.massage }} </h5>
+  <button type="button" class="btn btn-info" (click)="removeCoupon(i)">DELETE COUPON</button>
+</div>
+  </div>
+  

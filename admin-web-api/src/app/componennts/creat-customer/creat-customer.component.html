@@ -1,0 +1,13 @@
+<!--The details will be inserted into an empty customer to be sent to the data base -->
+<h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif">NEW CUSTOMER:</h2>
+<div style="width: 250px;"> 
+<label for="inputEmail4">&nbsp;NAME : &nbsp;</label> 
+<input type="text"  class="form-control"  name="nametxt" placeholder="insert customer name" [(ngModel)]="customerAdd.name"><br>
+
+<label for="inputEmail4">&nbsp;PASSWORD : &nbsp;</label> 
+<input type="password"  class="form-control"  name="passwordtxt" placeholder="insert customer password" [(ngModel)]="customerAdd.password"><br>
+</div>
+<button (click)="addCustomer()" >ADD CUSTOMER</button><br>
+
+<br>
+<br>

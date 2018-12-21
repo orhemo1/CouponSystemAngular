@@ -1,0 +1,16 @@
+<!--in this componnent the user first see al the coupons that he didnt purchesed 
+and choose one or more (he can only buy one of each kind)-->
+
+<div class="grid-container">
+
+
+<div class="item" *ngFor="let coupon of coupons; index as i">
+<img src={{coupon.image}} alt="" />
+<h4> {{ coupon.title }} | price: {{ coupon.price }}</h4>
+<h6> coupon id: {{coupon.id }}</h6>
+<h5>START DATE: {{ coupon.start_date }} | END DATE: {{ coupon.end_date }}</h5>
+<h5>AMOUNT LEFT: {{ coupon.amount }} | COUPON TYPE: {{ coupon.type }}</h5>
+<h5>DETAILS: {{ coupon.massage }} </h5>
+<button (click)=" purchesCoupon(i)" class="btn btn-info">PURCHES COUPON</button>
+</div>
+</div>

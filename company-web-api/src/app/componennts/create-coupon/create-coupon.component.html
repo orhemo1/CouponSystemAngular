@@ -1,0 +1,35 @@
+<!--All the details are inserted into the coupon and sent into the data base-->
+<form>
+
+  <h4>NEW COUPON:</h4><br>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">&nbsp;&nbsp;Title</label>
+      <input type="text" class="form-control" name="titletxt" placeholder="Title" [(ngModel)]="couponAdd.title"><br>
+
+      <label for="inputEmail4">&nbsp;&nbsp;Start-date &nbsp;</label>
+      <input type="date" class="form-control" name="startdatetxt" placeholder="Start" [(ngModel)]="couponAdd.start_date"><br>
+      <label for="inputEmail4">&nbsp;&nbsp;End-date &nbsp;</label>
+      <input type="date" class="form-control" name="enddatetxt" placeholder="End date" [(ngModel)]="couponAdd.end_date"><br>
+      <label for="inputEmail4">&nbsp;&nbsp;Amount &nbsp;</label>
+      <input type="number" class="form-control" name="amounttxt" placeholder="Amount" [(ngModel)]="couponAdd.amount"><br>
+      <label for="exampleFormControlSelect1">&nbsp;&nbsp;Type select</label>
+      <select class="form-control" [(ngModel)]="couponAdd.type" name="type" required type="text"><br>
+        <option value="">&nbsp;Choose type</option>
+        <option>food</option>
+        <option>electricity</option>
+        <option>hobby</option>
+        <option>vacation</option>
+      </select><br>
+      <label for="inputEmail4">&nbsp;&nbsp;Massage &nbsp;</label>
+      <input type="text" class="form-control" name="massagext" placeholder="Massage" [(ngModel)]="couponAdd.massage"><br>
+      <label for="inputEmail4">&nbsp;&nbsp;Price &nbsp;</label>
+      <input type="number" class="form-control" name="pricetxt" placeholder="Price" [(ngModel)]="couponAdd.price"><br>
+      <label for="inputEmail4">&nbsp;&nbsp;Image &nbsp;</label>
+      <input type="text" class="form-control" name="imagetxt" placeholder="past pic address" [(ngModel)]="couponAdd.image"><br>
+      <br>&nbsp;&nbsp;<button (click)="addCoupon()" style="font-size: 15px;">ADD COUPON</button><br>
+    </div>
+  </div>
+</form>
+<br>
+<br>

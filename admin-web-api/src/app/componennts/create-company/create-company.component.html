@@ -1,0 +1,15 @@
+
+
+<!--The details will be inserted into an empty company to be sent to the data base -->
+    <h2 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"> NEW COMPANY:</h2>
+
+    <div style="width: 250px;">
+ <label for="inputEmail4">&nbsp;&nbsp;NAME : &nbsp;</label> <input type="text"  placeholder="insert name" class="form-control" name="nametxt" [(ngModel)]="companyAdd.name"><br>
+ <label for="inputEmail4">&nbsp;&nbsp;PASSWORD : &nbsp;</label> <input type="password"  placeholder="insert password"   class="form-control" name="passwordtxt" [(ngModel)]="companyAdd.password"><br>
+ <label for="inputEmail4">&nbsp;&nbsp;EMAIL : &nbsp;</label> <input type="text"  placeholder="insert email"   class="form-control" name="emailtxt" [(ngModel)]="companyAdd.email"><br>
+
+<button (click)="addCompany()">CREATE COMPANY</button>
+<br>
+
+
+

@@ -1,0 +1,34 @@
+
+<!--the user give id and get the specific coupon than he can update the price or expiration date-->
+<div class="coupon-id">
+COUPON ID:&nbsp; <input type="text" [(ngModel)]="couponId" placeholder=" insert coupon id">
+&nbsp;&nbsp;<button (click)="getCoupon()">GET COUPON</button>
+</div><br><br>
+  <section>
+    <div class="container" *ngIf="couponAdd"  style="font-family: Georgia, 'Times New Roman', Times, serif">
+      <div class="card">
+        <div class="row"  style="font-size: 15px;">
+          <div class="col-md-6">
+            <div class="card-block">
+              <h4 class="card-title"> &nbsp;{{ couponAdd.title }} | price: {{ couponAdd.price }}</h4>
+              <h5 class="card-text">&nbsp;coupon id: {{couponAdd.id }}</h5>
+              <p class="card-text">&nbsp;START DATE: {{ couponAdd.start_date }} | END DATE: {{ couponAdd.end_date }}</p>
+              <p class="card-text">&nbsp;AMOUNT LEFT: {{ couponAdd.amount }} | COUPON TYPE: {{ couponAdd.type }}</p>
+              <p class="card-text">&nbsp;DETAILS: {{ couponAdd.massage }} </p>
+              &nbsp;change price:  <input type="number" [(ngModel)]="newPrice"><br><br>
+              <button type="button" class="btn btn-info" (click)="updateCouponPrice()">UPDATE PRICE</button><br><br>
+
+              &nbsp;change experation date:<input type="date" [(ngModel)]="newEndDate"><br><br>
+              <button type="button" class="btn btn-info" (click)="updateCouponDate()">UPDATE END DATA</button><br><br>
+              <br>   </div>
+          </div>
+          <div class="col-md-6">
+         
+            <img class="card-img-bottom" src=  {{couponAdd.image}}  alt="" title="">
+            <div class="card-img-bottom">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

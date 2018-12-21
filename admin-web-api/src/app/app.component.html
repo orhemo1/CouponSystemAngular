@@ -1,0 +1,28 @@
+
+<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+<div class="container-fluid">
+    <div class="navbar-header"><a class="navbar-brand"  style="font-size: 23px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Admin Facade</a>
+      
+    </div>
+    <div class="collapse navbar-collapse navbar-menubuilder" style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">
+        <ul class="nav navbar-nav navbar-left">
+            <li><a routerLink="/createcompany">Create Company</a>
+            </li>
+            <li><a  routerLink="/getcompany">Get Company</a>
+            </li>
+            <li><a routerLink="/getallcompanies">Get All Companies</a>
+            </li>
+            <li><a routerLink="/createcustomer">Create Customer</a>
+            </li>
+            <li><a routerLink="/getcustomer">Get Customer</a>
+            </li>
+             <li><a routerLink="/getallcustomers">GET All Customers</a>
+            </li>
+            <li></li>
+        </ul>
+        <a (click)="logOut()"  class="myButton" href="http://localhost:8080">Log-out</a>
+    </div>
+</div>
+</div>
+
+<router-outlet></router-outlet>

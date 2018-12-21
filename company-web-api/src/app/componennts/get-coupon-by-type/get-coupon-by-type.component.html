@@ -1,0 +1,26 @@
+<!--user can get all the company coupons from a specific type-->
+<div class="select-style">TYPE :
+<select [(ngModel)]="couponType" name="type" required type="text" (ngModelChange)=" getCouponByType()">
+   
+    <option>food</option>
+    <option>electricity</option>
+    <option>hobby</option>
+    <option>vacation</option>
+</select>
+</div>
+
+<div class="grid-container">
+
+
+    <div class="item" *ngFor="let coupon of coupons; index as i">
+  <img src={{coupon.image}} alt="" />
+  <h4> {{ coupon.title }} | price: {{ coupon.price }}</h4>
+  <h6> coupon id: {{coupon.id }}</h6>
+  <h5>START DATE: {{ coupon.start_date }} | END DATE: {{ coupon.end_date }}</h5>
+  <h5>AMOUNT LEFT: {{ coupon.amount }} | COUPON TYPE: {{ coupon.type }}</h5>
+  <h5>DETAILS: {{ coupon.massage }} </h5>
+  <button type="button" class="btn btn-info" (click)="removeCoupon(i)">DELETE COUPON</button>
+  
+  
+  </div>
+  </div>

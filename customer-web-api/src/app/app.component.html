@@ -1,0 +1,22 @@
+<div id="custom-bootstrap-menu" class="navbar navbar-default " role="navigation">
+        <div class="container-fluid">
+        
+            <div class="collapse navbar-collapse navbar-menubuilder" style="font-size: 15px;">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a class="navbar-brand" >Customer facade</a></li>
+                    <li><a routerLink="/purchasecoupon">Purchase coupon</a>
+                    </li>
+                    <li><a  routerLink="/getallpurchasecoupons">Get all purchase coupons</a>
+                    </li>
+                    <li><a routerLink="/getallpurchasecouponsbytype">Get all purchase coupons by type</a>
+                    </li>
+                    <li><a routerLink="/getallpurchasecouponsbyprice">Get all purchase coupons by price</a>
+                    </li>
+ 
+                </ul>
+                <a (click)="logOut()"  class="myButton" href="http://localhost:8080">Log-out</a>
+            </div>
+        </div>
+    </div>
+    
+<router-outlet></router-outlet>
